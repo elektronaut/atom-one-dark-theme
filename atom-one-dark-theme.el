@@ -65,6 +65,7 @@
    `(secondary-selection ((t (:background ,atom-one-dark-bg-1))))
    `(query-replace ((t (:inherit (isearch)))))
    `(minibuffer-prompt ((t (:foreground ,atom-one-dark-silver))))
+   `(whitespace-line ((t (:foreground ,atom-one-dark-red-1 :background nil))))
 
    `(font-lock-builtin-face ((t (:foreground ,atom-one-dark-cyan))))
    `(font-lock-comment-face ((t (:foreground ,atom-one-dark-mono-3))))
@@ -84,7 +85,7 @@
    `(mode-line-buffer-id ((t (:weight bold))))
    `(mode-line-emphasis ((t (:weight bold))))
    `(mode-line-inactive ((t (:background ,atom-one-dark-gray))))
-   
+
     ;; ido
    `(ido-first-match ((t (:foreground ,atom-one-dark-purple :weight bold))))
    `(ido-only-match ((t (:foreground ,atom-one-dark-red-1 :weight bold))))
@@ -127,16 +128,22 @@
    '(dired-flagged ((t (:inherit (diff-hl-delete)))))
    '(dired-symlink ((t (:foreground "#FD5FF1"))))
 
+   ;; flycheck
+   `(flycheck-info ((t (:underline (:style wave :color ,atom-one-dark-green)))))
+   `(flycheck-warning ((t (:underline (:style wave :color ,atom-one-dark-orange-1)))))
+   `(flycheck-error ((t (:underline (:style wave :color ,atom-one-dark-red-2)))))
+   `(flycheck-fringe-warning ((t (:foreground ,atom-one-dark-orange-1))))
+
    ;; helm
    `(helm-header ((t (:foreground ,atom-one-dark-mono-2
                       :background ,atom-one-dark-bg
                       :underline nil
-                      :box (:line-width 6 :color ,atom-one-dark-bg)))))
-   `(helm-source-header ((t (:foreground ,atom-one-dark-orange-2
+                      :box (:line-width 3 :color ,atom-one-dark-bg)))))
+   `(helm-source-header ((t (:foreground ,atom-one-dark-purple
                              :background ,atom-one-dark-bg
                              :underline nil
                              :weight bold
-                             :box (:line-width 6 :color ,atom-one-dark-bg)))))
+                             :box nil))))
    `(helm-selection ((t (:background ,atom-one-dark-gray))))
    `(helm-selection-line ((t (:background ,atom-one-dark-gray))))
    `(helm-visible-mark ((t (:foreground ,atom-one-dark-bg :foreground ,atom-one-dark-orange-2))))
@@ -161,7 +168,8 @@
    `(helm-buffer-process ((t (:foreground ,atom-one-dark-mono-2))))
    `(helm-buffer-saved-out ((t (:foreground ,atom-one-dark-fg))))
    `(helm-buffer-size ((t (:foreground ,atom-one-dark-mono-2))))
-   `(helm-buffer-directory ((t (:foreground ,atom-one-dark-purple))))
+   `(helm-buffer-file ((t (:foreground ,atom-one-dark-fg))))
+   `(helm-buffer-directory ((t (:foreground ,atom-one-dark-purple :background nil))))
    `(helm-grep-cmd-line ((t (:foreground ,atom-one-dark-cyan))))
    `(helm-grep-file ((t (:foreground ,atom-one-dark-fg))))
    `(helm-grep-finish ((t (:foreground ,atom-one-dark-green))))
